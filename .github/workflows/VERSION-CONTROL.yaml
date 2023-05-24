@@ -1,0 +1,31 @@
+name: Update Release Tag
+
+on:
+  workflow_dispatch:
+    inputs:
+      release_tag:
+        description: "Release Tag"
+        required: true
+        default: Add latest version (ex. v1.2.3)
+      release_title:
+        description: "Release Title"
+        required: true
+      release_notes:
+        description: "Release Notes"
+        required: true
+
+env:  
+  release_tag: ${{ github.event.inputs.release_tag }}
+  release_title: ${{ github.event.inputs.release_title }}
+  release_notes: ${{ github.event.inputs.release_notes }}
+
+jobs:
+  version_control:
+    runs-on: ubuntu-latest
+    steps:
+    - name: GitHub Repository Check
+      uses: actions/checkout@v3.5.2
+    - name: Update Release Tag
+      run: gh release create $release_tag --title "$release_title" --notes "$release_notes"
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
