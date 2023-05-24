@@ -1,0 +1,31 @@
+name: NEXT.js with TypeScript Test
+
+on:
+  push:
+    branches:
+      - main
+      - dev
+  pull_request:
+    branches:
+      - main
+      - dev
+
+jobs:
+  lint_test_code:
+    name: Lint & Test JavaScript Code
+    runs-on: ubuntu-latest
+    steps:
+    - name: GitHub Repository Check
+      uses: actions/checkout@v3.5.2
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18.x'
+    - name: Download Packages & Install Dependencies
+      run: npm install
+    - name: Download & Install "JEST" Package(s)
+      run: npm install --save-dev jest
+    - name: Lint Code With ESLint
+      run: npm run lint
+    - name: Test Code With JEST Framework
+      run: npm run test
