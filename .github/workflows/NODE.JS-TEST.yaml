@@ -20,4 +20,3 @@ jobs:
       run: npm run lint
     - name: Test Code With JEST Framework
       run: npm run test:ci
-      continue-on-error: true
