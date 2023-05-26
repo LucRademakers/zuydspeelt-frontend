@@ -2,13 +2,6 @@ name: NEXT.js with TypeScript Test
 
 on:
   push:
-    branches:
-      - main
-      - dev
-  pull_request:
-    branches:
-      - main
-      - dev
 
 jobs:
   lint_test_code:
@@ -23,11 +16,8 @@ jobs:
         node-version: '18.x'
     - name: Download Packages & Install Dependencies
       run: npm install
-    - name: Download & Install "JEST" Package(s)
-      run: npm install --save-dev jest
     - name: Lint Code With ESLint
       run: npm run lint
-      continue-on-error: true
     - name: Test Code With JEST Framework
-      run: npm run test
+      run: npm run test:ci
       continue-on-error: true
