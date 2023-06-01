@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { API_ENDPOINTS } from '@/constants/apiConstants';
 
 interface Category {
     categoryId: number;
@@ -13,7 +14,7 @@ const useFetchCategories = (): [Category[], boolean] => {
     useEffect(() => {
         const fetchData = async () => {
             setIsLoading(true);
-            const response = await fetch('http://localhost:8080/api/categories');
+            const response = await fetch(API_ENDPOINTS.categories);
             const json = await response.json();
             setCategories(json);
             setIsLoading(false);
