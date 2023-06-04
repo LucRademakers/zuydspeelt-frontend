@@ -1,14 +1,24 @@
 export interface Category {
-    categoryId: number;
-    categoryName: string;
+    id: number;
+    name: string;
     games: any[];
 }
 
-export interface Categories {
-    categories: Category[];
+export interface Game {
+    id: number;
+    title: string;
+    popularity: number;
+    createdAt: string;
 }
 
-export interface FetchCategoriesState extends Categories {
-    isFetching: boolean;
-    error: Error | null;
+export interface User {
+    id: number;
+    username: string;
+    password: string;
+    email: string;
+    createdAt: string;
+    comments: any[];
+    games: any[];
+    userGames: any[];
+    ratings: any[];
 }
