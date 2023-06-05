@@ -27,7 +27,7 @@ export default function Login() {
         <Link href="/home">
         <button className="bg-gradient-to-b from-gray-700 to-gray-900 font-semibold p-2 md:p-4 text-white w-full">Login</button>
         </Link>
-        <Link href="/register">Don't have an account yet?  Sign Up</Link>
+        <Link href="/register">Don&apos;t have an account yet?  Sign Up</Link>
       </form>
     </div>
    </div>
