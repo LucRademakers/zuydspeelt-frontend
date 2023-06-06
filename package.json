@@ -27,6 +27,7 @@
   },
   "devDependencies": {
     "@cucumber/cucumber": "^9.1.2",
+    "@cucumber/pretty-formatter": "^1.0.0",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^14.0.0",
     "cucumber-tsflow": "^4.0.6",

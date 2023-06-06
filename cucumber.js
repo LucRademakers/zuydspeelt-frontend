@@ -1,3 +1,3 @@
 module.exports = {
-  default: `--require-module ts-node/register --require features/*.ts --publish-quiet --format-options '{"snippetInterface": "synchronous"}'`,
+  default: `-f @cucumber/pretty-formatter --require-module ts-node/register  --require features/*.ts --publish-quiet --format-options '{"snippetInterface": "synchronous"}'`,
 };
