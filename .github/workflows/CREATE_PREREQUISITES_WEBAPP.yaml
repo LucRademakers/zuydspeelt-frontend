@@ -1,0 +1,78 @@
+name: Create Prerequisites Needed For Azure Webapp
+
+on:
+  workflow_dispatch:
+    inputs:
+      environment_type:
+        type: choice
+        required: true
+        description: Choose Environment
+        options:
+        - dev
+        - prod
+
+jobs:
+  create_service_plan:
+    name: Create Azure App Service Plan
+    runs-on: ubuntu-latest
+    steps:
+    - name: Check GitHub Repository
+      uses: actions/checkout@v3.5.2
+
+    - name: Authenticate using a Service Principal
+      uses: azure/login@v1.4.6
+      with:
+        creds: '{"clientId":"${{ secrets.CLIENT_ID }}","clientSecret":"${{ secrets.CLIENT_SECRET }}","subscriptionId":"${{ secrets.SUBSCRIPTION_ID }}","tenantId":"${{ secrets.TENANT_ID }}"}'
+
+    - name: Create App Service Plan With Azure CLI Commands
+      run: | 
+          az appservice plan create \
+          --name "ASP-B2C6B-FRONTEND" \
+          --resource-group "B2C6B" \
+          --is-linux \
+          --location "westeurope" \
+          --sku "B1"
+    
+  create_webapp_dev:
+    needs: create_service_plan
+    if: ${{ (github.event.inputs.environment_type == 'dev') }}
+    name: Create Azure Webapp Service (DEV)
+    runs-on: ubuntu-latest
+    steps:
+    - name: Check GitHub Repository
+      uses: actions/checkout@v3.5.2
+
+    - name: Authenticate using a Service Principal
+      uses: azure/login@v1.4.6
+      with:
+        creds: '{"clientId":"${{ secrets.CLIENT_ID }}","clientSecret":"${{ secrets.CLIENT_SECRET }}","subscriptionId":"${{ secrets.SUBSCRIPTION_ID }}","tenantId":"${{ secrets.TENANT_ID }}"}'
+  
+    - name: Create Webapp Service (DEV) With Azure CLI Commands
+      run: | 
+          az webapp create \
+          --name "B2C6B-FRONTEND-DEV" \
+          --resource-group "B2C6B" \
+          --plan "ASP-B2C6B-FRONTEND" \
+          --runtime "NODE|18-lts"
+       
+  create_webapp_prod:
+    needs: create_service_plan
+    if: ${{ (github.event.inputs.environment_type == 'prod') }}
+    name: Create Azure Webapp Service (PROD)
+    runs-on: ubuntu-latest
+    steps:
+    - name: Check GitHub Repository
+      uses: actions/checkout@v3.5.2
+
+    - name: Authenticate using a Service Principal
+      uses: azure/login@v1.4.6
+      with:
+        creds: '{"clientId":"${{ secrets.CLIENT_ID }}","clientSecret":"${{ secrets.CLIENT_SECRET }}","subscriptionId":"${{ secrets.SUBSCRIPTION_ID }}","tenantId":"${{ secrets.TENANT_ID }}"}'
+  
+    - name: Create Webapp Service (PROD) With Azure CLI Commands
+      run: | 
+          az webapp create \
+          --name "B2C6B-FRONTEND-PROD" \
+          --resource-group "B2C6B" \
+          --plan "ASP-B2C6B-FRONTEND" \
+          --runtime "NODE|18-lts"   
