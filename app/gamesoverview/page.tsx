@@ -1,6 +1,7 @@
 import React from 'react';
+import Link from 'next/link';
 
-const gamesoverview = () => {
+export default function gamesoverview() {
   const containerStyle = {
     backgroundImage: "url('https://images.pexels.com/photos/3165335/pexels-photo-3165335.jpeg')",
     backgroundSize: 'cover',
@@ -10,8 +11,8 @@ const gamesoverview = () => {
 
   return (
     <div style={containerStyle}>
-      {/* Content of the games overview page */}
+       {'Content of the games overview page'} 
+       
     </div>
   );
 };
-export default gamesoverview;
