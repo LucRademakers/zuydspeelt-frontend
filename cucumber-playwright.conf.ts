@@ -10,6 +10,8 @@ import {
 import { chromium, ChromiumBrowser, request } from "@playwright/test";
 import { ITestCaseHookParameter } from "@cucumber/cucumber/lib/support_code_library_builder/types";
 
+let frontendProcess = require("child_process");
+
 declare global {
   var browser: ChromiumBrowser;
 }
@@ -17,6 +19,7 @@ declare global {
 setDefaultTimeout(process.env.PWDEBUG ? -1 : 60 * 1000);
 
 BeforeAll(async function () {
+  frontendProcess = await frontendProcess.exec("npm run dev");
   global.browser = await chromium.launch();
 });
 
@@ -36,4 +39,5 @@ After(async function (this: ICustomWorld, {}: ITestCaseHookParameter) {
 
 AfterAll(async function () {
   await browser.close();
+  await frontendProcess.kill();
 });
