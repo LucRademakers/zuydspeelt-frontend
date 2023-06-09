@@ -1,11 +1,14 @@
+// @client-component
 import Image from 'next/image'
-import  Dropdown from "./dropdown/page";
+import Dropdown from "./dropdown/page"
+import Searchbar from "./searchbar/page";
 
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
 
     <div style={{position: 'absolute', top: '0', right: '0', width: '100px' }}>
+      <Searchbar/>
       <Dropdown/>
     </div>
 
