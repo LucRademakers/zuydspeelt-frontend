@@ -6,12 +6,14 @@ export default function gamesoverview() {
     backgroundImage: "url('https://images.pexels.com/photos/3165335/pexels-photo-3165335.jpeg')",
     backgroundSize: 'cover',
     backgroundPosition: 'center',
+    height: '100vh',
+    weight: '100vw'
     /* Additional background styles here */
   };
 
   return (
     <div style={containerStyle}>
-       {'Content of the games overview page'} 
+      {/* {'/* evt tekst hier'} */}
        
     </div>
   );
