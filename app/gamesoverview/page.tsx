@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 
-export default function gamesoverview() {
+export default function GamesOverview() {
   const containerStyle = {
     backgroundImage: "url('https://images.pexels.com/photos/3165335/pexels-photo-3165335.jpeg')",
     backgroundSize: 'cover',
@@ -9,6 +9,7 @@ export default function gamesoverview() {
     height: '100vh',
     width: '100vw',
     display: 'flex',
+    flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
   };
@@ -26,6 +27,9 @@ export default function gamesoverview() {
 
   return (
     <div style={containerStyle}>
+      <div>
+        <h2 style={{ fontFamily: 'agrandir grand', fontSize: '60px', color: '#EAFF82' }}>Games Overview</h2>
+      </div>
       <div style={{ marginTop: '150px', display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '25px 120px' }}>
         <Link href="/game1">
           <button style={buttonStyle}>Game 1</button>
