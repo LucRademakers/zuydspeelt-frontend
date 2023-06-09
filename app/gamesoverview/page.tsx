@@ -19,16 +19,16 @@ export default function GamesOverview() {
     borderRadius: '5px',
     padding: '5px',
     background: '#EAFF82',
-    height: '75px',
-    width: '300px',
-    fontFamily: 'agrandir grand',
-    fontSize: '20px',
+    height: '55px',
+    width: '275px',
+    fontFamily: 'Inter',
+    fontSize: '16px',
   };
 
   return (
     <div style={containerStyle}>
       <div>
-        <h2 style={{ fontFamily: 'agrandir grand', fontSize: '60px', color: '#EAFF82' }}>Games Overview</h2>
+        <h2 style={{ fontFamily: 'inter', fontSize: '56px', color: '#EAFF82' }}>Games Overview</h2>
       </div>
       <div style={{ marginTop: '150px', display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '25px 120px' }}>
         <Link href="/game1">
