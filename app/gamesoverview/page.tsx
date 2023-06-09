@@ -7,14 +7,45 @@ export default function gamesoverview() {
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     height: '100vh',
-    weight: '100vw'
-    /* Additional background styles here */
+    width: '100vw',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+  };
+
+  const buttonStyle = {
+    border: '1px solid #000000',
+    borderRadius: '5px',
+    padding: '5px',
+    background: '#EAFF82',
+    height: '75px',
+    width: '300px',
+    fontFamily: 'agrandir grand',
+    fontSize: '20px',
   };
 
   return (
     <div style={containerStyle}>
-      {/* {'/* evt tekst hier'} */}
-       
+      <div style={{ marginTop: '150px', display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '25px 120px' }}>
+        <Link href="/game1">
+          <button style={buttonStyle}>Game 1</button>
+        </Link>
+        <Link href="/game2">
+          <button style={buttonStyle}>Game 2</button>
+        </Link>
+        <Link href="/game3">
+          <button style={buttonStyle}>Game 3</button>
+        </Link>
+        <Link href="/game4">
+          <button style={buttonStyle}>Game 4</button>
+        </Link>
+        <Link href="/game5">
+          <button style={buttonStyle}>Game 5</button>
+        </Link>
+        <Link href="/game6">
+          <button style={buttonStyle}>Game 6</button>
+        </Link>
+      </div>
     </div>
   );
-};
+}
