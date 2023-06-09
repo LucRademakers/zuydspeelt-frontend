@@ -8,6 +8,15 @@ npm i
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+
+## Downloading headlessui pacakges
+
+Use the following line the install the headlessui packages:
+
+```bash
+npm install @headlessui/react
+```
+
 ## Getting Started
 
 First, run the development server:
