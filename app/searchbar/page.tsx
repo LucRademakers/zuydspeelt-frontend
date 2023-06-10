@@ -1,29 +1,59 @@
 'use client';
 // @client-component
 
-import { useState } from 'react';
+import React, { useState } from 'react';
 
-function Searchbar() {
-  const [search, setSearch] = useState('');  
+export default function Searchbar() {
+  const [searchTerm, setSearchTerm] = useState('');
 
-  const handleSearchChange = (e) => {
-    setSearch(e.target.value);
-  }
+  // Hier kan later misschien vanuit de database games worden toegevoegd.
+  const games = [
+    'Tic Tac Toe',
+    'The World\'s Hardest Game',
+    'GTA 6',
+    'Vuurjongen en Watermeisje',
+    'Fancy Pants Adventures',
+    'Shoppingcart Hero',
+    'A Koopa\'s Revenge',
+    'Super Mario 63',
+    'Minecraft',
+    'Enough Plumbers',
+    'Dutchman Dash',
+    'Bullet Bill',
+  ];
+
+  const filteredGames = games.filter((game) =>
+    game.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
+  const handleGameClick = (game) => {
+    console.log(`Clicked on game: ${game}`);
+    // Hier kan een link geplaatst worden naar de desbetreffende pagina van het spel.
+  };
 
   return (
-    <div className="relative flex items-center justify-center w-full max-w-md px-6 py-4 my-12 bg-white rounded-md shadow-md dark:bg-gray-800">
-      <input 
-        type="search" 
-        name="search" 
-        id="search" 
-        className="w-full border-2 border-gray-300 p-2 rounded-md" 
-        placeholder="Search..." 
-        value={search}
-        onChange={handleSearchChange}
+    <div>
+      <input
+        type="text"
+        value={searchTerm}
+        onChange={(e) => setSearchTerm(e.target.value)}
+        placeholder="Search games..."
       />
-    </div>
-  )
-}
 
-export default Searchbar;
-;
+      {searchTerm && (
+
+      <ul>
+        {filteredGames.length > 0 ? (
+          filteredGames.map((game) => (
+            <li key={game} onClick={() => handleGameClick(game)}>
+              {game}
+            </li>
+          ))
+        ) : (
+          <li>No matching games found.</li>
+        )}
+      </ul>
+      )}
+    </div>
+  );
+}
