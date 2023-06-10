@@ -46,6 +46,7 @@ export default function Searchbar() {
         onChange={(e) => setSearchTerm(e.target.value)}
         placeholder="Search games..."
         className="w-full px-4 py-2 text-gray-700 bg-gray-200 rounded-md focus:bg-white focus:outline-none"
+        
       />
 
       {searchTerm && (
