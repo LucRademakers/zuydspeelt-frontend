@@ -1,12 +1,15 @@
 ## Searchbar component
-Rechtsklik op App > New Folder
-Geef de folder een passende naam, in dit geval 'searchbar'.
+De zoekbar kan in elke pagina worden gezet. Zet het volgende in je code:
 
-Rechtsklik op de map 'searchbar' > New file > geef de file de naam 'page.tsx'. Dit is niet noodzakelijk, maar wel handig om de zoekbalk op een aparte pagina te kunnen weergeven.
+<div style={{ display: 'flex', justifyContent: 'center', position: 'absolute', top:'0', zIndex: 100 }}>
+      {<Searchbar />}
+</div>
 
-Opmerking: de naam van de folder is ook de naam van de pagina. (http://localhost:3000/searchbar).
+Zorg er wel voor dat bovenstaande BINNEN je return() functie staat!
 
-De zoekfunctie wordt in page.tsx geschreven. 
+Normaliter moet de searchbar dan werken. Als je toch een error krijgt dat de searchbar niet gevonden wordt, zet dan even het volgende stukje code helemaal bovenaan je code binnen je page.tsx bestand:
 
-## Styling
+import Searchbar from "./searchbar/page";
+
+##Styling
 Styling is conform Figma: https://www.figma.com/file/qgkSo36YCz5YhnpReO5XLF/Untitled?type=design&node-id=0-1&t=pVq8ScItqKCoWLUA-0
