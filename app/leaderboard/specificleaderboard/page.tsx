@@ -1,6 +1,6 @@
 export default function Specificleaderboard() {
     return(
-    <div className="mx-auto my-2 p-10 rounded overflow-hidden text-xs">
+    <div className="mx-auto my-2 max-w-xl rounded overflow-hidden text-xs">
   
   <div className="flex bg-orange-300 px-2 py-2">
     <div className="w-5/12 text-gray-700 text-left">GameName</div>
