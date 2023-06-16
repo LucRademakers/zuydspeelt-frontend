@@ -15,5 +15,5 @@ Normaliter moet de searchbar dan werken. Als je toch een error krijgt dat de sea
 import Searchbar from "./searchbar/page";
 ```
 
-##Styling
+## Styling
 Styling is conform Figma: https://www.figma.com/file/qgkSo36YCz5YhnpReO5XLF/Untitled?type=design&node-id=0-1&t=pVq8ScItqKCoWLUA-0
