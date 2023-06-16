@@ -2,41 +2,43 @@ import React from 'react';
 import Link from 'next/link';
 
 export default function GamesOverview() {
+  const containerStyle = {
+    backgroundImage: "url('https://images.pexels.com/photos/3165335/pexels-photo-3165335.jpeg')",
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    height: '100vh',
+    width: '100vw',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
+  };
+
+  const buttonStyle = 'border-2 border-black rounded-lg py-3 px-10 bg-blue-500 text-lg';
+
   return (
-    <div className="bg-cover bg-center h-screen w-screen flex flex-col justify-center items-center">
+    <div style={containerStyle}>
       <div>
-        <h2 className="text-6xl text-yellow-300">Games Overview</h2>
+        <h2 style={{ fontSize: '56px' }} className="text-blue-500">Games Overview</h2>
       </div>
-      <div className="mt-24 grid grid-cols-2 gap-x-28 gap-y-8">
+      <div style={{ marginTop: '150px', display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '25px 120px' }}>
         <Link href="/game1">
-          <button className="border border-black rounded-md py-2 px-4 bg-yellow-300 text-lg">
-            Game 1
-          </button>
+          <button className={buttonStyle}>Game 1</button>
         </Link>
         <Link href="/game2">
-          <button className="border border-black rounded-md py-2 px-4 bg-yellow-300 text-lg">
-            Game 2
-          </button>
+          <button className={buttonStyle}>Game 2</button>
         </Link>
         <Link href="/game3">
-          <button className="border border-black rounded-md py-2 px-4 bg-yellow-300 text-lg">
-            Game 3
-          </button>
+          <button className={buttonStyle}>Game 3</button>
         </Link>
         <Link href="/game4">
-          <button className="border border-black rounded-md py-2 px-4 bg-yellow-300 text-lg">
-            Game 4
-          </button>
+          <button className={buttonStyle}>Game 4</button>
         </Link>
         <Link href="/game5">
-          <button className="border border-black rounded-md py-2 px-4 bg-yellow-300 text-lg">
-            Game 5
-          </button>
+          <button className={buttonStyle}>Game 5</button>
         </Link>
         <Link href="/game6">
-          <button className="border border-black rounded-md py-2 px-4 bg-yellow-300 text-lg">
-            Game 6
-          </button>
+          <button className={buttonStyle}>Game 6</button>
         </Link>
       </div>
     </div>
