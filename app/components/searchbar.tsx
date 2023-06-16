@@ -40,7 +40,6 @@ export default function Searchbar() {
   position: 'absolute', 
   top:'0', 
   zIndex: 100,
-  paddingBottom: 50
   }}
   >
     <div

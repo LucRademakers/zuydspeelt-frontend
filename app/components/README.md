@@ -2,7 +2,7 @@
 De zoekbar kan in elke pagina worden gezet. Zet het volgende in je code:
 
 ```
-<div style={{ display: 'flex', justifyContent: 'center', position: 'absolute', top:'0', zIndex: 100 }}>
+<div>
       {<Searchbar />}
 </div>
 ```
@@ -12,7 +12,7 @@ Zorg er wel voor dat bovenstaande BINNEN je return() functie staat!
 Normaliter moet de searchbar dan werken. Als je toch een error krijgt dat de searchbar niet gevonden wordt, zet dan even het volgende stukje code helemaal bovenaan je code binnen je page.tsx bestand:
 
 ```
-import Searchbar from "./searchbar/page";
+import Searchbar from "./components/searchbar";
 ```
 
 ## Styling
