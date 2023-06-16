@@ -1,3 +1,5 @@
+
+
 'use client';
 // @client-component
 
@@ -34,53 +36,39 @@ export default function Searchbar() {
   };
 
   return (
-  <div 
-  style ={{ display: 'flex', 
-  justifyContent: 'center', 
-  position: 'absolute', 
-  top:'0', 
-  }}
-  >
-    <div
-      className = 'bg-blue'
-      style={{
-        width: '320px',
-        height: '86px',
-        margin: '0 auto',
-        filter: 'drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))',
-      }}
-    >
-      <input
-        type="text"
-        value={searchTerm}
-        onChange={(e) => setSearchTerm(e.target.value)}
-        placeholder="Search games..."
-        className="w-full px-4 py-2 text-gray-700 bg-gray-200 rounded-md focus:bg-white focus:outline-none"                
-      />
+    <div className="flex justify-center absolute top-0 z-100">
+      <div className="w-80 m-auto filter drop-shadow-md">
+        <input
+          type="text"
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
+          placeholder="Search games..."
+          className="w-full px-4 py-2 text-gray-700 bg-gray-200 rounded-md focus:bg-white focus:outline-none"
+        />
 
-      {searchTerm && (
-      <div className="search-results" style={{ backgroundColor: 'whitesmoke' , padding: '10px' }}>
-        <ul className="mt-4">
-          {filteredGames.length > 0 ? (
-            filteredGames.map((game) => (
-              <li
-                key={game.name}
-                onClick={() => handleGameClick(game.name)}
-                className="cursor-pointer py-1 hover:bg-gray-200"
-              >
-                <Link legacyBehavior href={game.link}>
-                  <a>{game.name}</a>
-                </Link>
-              </li>
-            ))
-          ) : (
-            <li>No matching games found.</li>
-          )}
-        </ul>
+        {searchTerm && (
+          <div className="search-results bg-whitesmoke p-0">
+            <ul className="mt-1 bg-white p-2 rounded-md">
+              {filteredGames.length > 0 ? (
+                filteredGames.map((game) => (
+                  <li
+                    key={game.name}
+                    onClick={() => handleGameClick(game.name)}
+                    className="cursor-pointer py-1 hover:bg-gray-200"
+                  >
+                    <Link legacyBehavior href={game.link}>
+                      <a>{game.name}</a>
+                    </Link>
+                  </li>
+                ))
+              ) : (
+                <li>No matching games found.</li>
+              )}
+            </ul>
+          </div>
+        )}
       </div>
-      )}
-      
-    </div>
     </div>
   );
 }
+
