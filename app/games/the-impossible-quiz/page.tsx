@@ -1,4 +1,4 @@
-import Searchbar from "@/app/searchbar/page"
+import Searchbar from "@/app/components/searchbar"
 import Link from 'next/link';
 
 export default function TheImpossibleQuiz() {

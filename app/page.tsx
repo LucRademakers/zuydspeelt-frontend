@@ -1,7 +1,7 @@
 // @client-component
 import Image from 'next/image'
 import Dropdown from "./dropdown/page"
-import Searchbar from "./searchbar/page";
+import Searchbar from "./components/searchbar";
 
 export default function Home() {
   return (
