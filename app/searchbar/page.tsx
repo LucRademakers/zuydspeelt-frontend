@@ -24,7 +24,7 @@ export default function Searchbar() {
   );
 
   // Wanneer op een game geklikt wordt, wordt de gebruiker naar het desbetreffende spel gestuurd.
-  const handleGameClick = (game) => {
+  const handleGameClick = (game: string) => {
     
     const gameLink = games.find((item) => item.name === game)?.link;   
 
