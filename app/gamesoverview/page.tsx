@@ -21,7 +21,6 @@ export default function GamesOverview() {
     background: '#EAFF82',
     height: '55px',
     width: '275px',
-    // fontFamily: 'Inter',
     fontSize: '16px',
   };
 
