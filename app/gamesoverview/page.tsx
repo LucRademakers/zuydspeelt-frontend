@@ -14,39 +14,31 @@ export default function GamesOverview() {
     alignItems: 'center',
   };
 
-  const buttonStyle = {
-    border: '1px solid #000000',
-    borderRadius: '5px',
-    padding: '5px',
-    background: '#EAFF82',
-    height: '55px',
-    width: '275px',
-    fontSize: '16px',
-  };
+  const buttonStyle = 'border-2 border-black rounded-lg py-3 px-10 bg-blue-500 text-lg';
 
   return (
     <div style={containerStyle}>
       <div>
-        <h2 style={{fontSize: '56px', color: '#EAFF82' }}>Games Overview</h2>
+        <h2 style={{ fontSize: '56px' }} className="text-blue-500">Games Overview</h2>
       </div>
       <div style={{ marginTop: '150px', display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '25px 120px' }}>
         <Link href="/game1">
-          <button style={buttonStyle}>Game 1</button>
+          <button className={buttonStyle}>Game 1</button>
         </Link>
         <Link href="/game2">
-          <button style={buttonStyle}>Game 2</button>
+          <button className={buttonStyle}>Game 2</button>
         </Link>
         <Link href="/game3">
-          <button style={buttonStyle}>Game 3</button>
+          <button className={buttonStyle}>Game 3</button>
         </Link>
         <Link href="/game4">
-          <button style={buttonStyle}>Game 4</button>
+          <button className={buttonStyle}>Game 4</button>
         </Link>
         <Link href="/game5">
-          <button style={buttonStyle}>Game 5</button>
+          <button className={buttonStyle}>Game 5</button>
         </Link>
         <Link href="/game6">
-          <button style={buttonStyle}>Game 6</button>
+          <button className={buttonStyle}>Game 6</button>
         </Link>
       </div>
     </div>
