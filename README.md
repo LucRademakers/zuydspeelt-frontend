@@ -6,6 +6,11 @@ Use the following line the install the Node.js packages:
 npm i
 ```
 
+Use the following line to install React:
+```bash
+npm install react
+```
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
