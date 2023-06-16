@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link';
 import React from 'react';
-import Dropdown from "./dropdown/page";
+import Dropdown from "@/components/Dropdown";
 
 const Home = () => {
   return (
