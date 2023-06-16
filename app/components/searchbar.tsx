@@ -39,10 +39,10 @@ export default function Searchbar() {
   justifyContent: 'center', 
   position: 'absolute', 
   top:'0', 
-  zIndex: 100,
   }}
   >
     <div
+      className = 'bg-blue'
       style={{
         width: '320px',
         height: '86px',

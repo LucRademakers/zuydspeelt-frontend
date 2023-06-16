@@ -29,7 +29,7 @@ test('correcte placeholder tekst', () => {
 // Test of de zoekterm correct geüpdatet wordt
 test('zoekterm wordt correct geüpdatet', () => {
     render(<Searchbar />);
-    const inputElement = screen.getByPlaceholderText('Search games...');
+    const inputElement = screen.getByPlaceholderText('Search games...') as HTMLInputElement;
     fireEvent.change(inputElement, { target: { value: 'Tic Tac Toe' } });
     expect(inputElement.value).toBe('Tic Tac Toe');
 });
