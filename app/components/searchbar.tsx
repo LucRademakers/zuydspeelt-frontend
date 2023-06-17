@@ -1,11 +1,10 @@
-
-
 'use client';
 // @client-component
 
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
+
 
 export default function Searchbar() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -18,7 +17,8 @@ export default function Searchbar() {
     { name: 'The World\'s Hardest Game', link: '/games/the-worlds-hardest-game' },
     { name: 'The Impossible Quiz', link: '/games/the-impossible-quiz' },
     { name: 'Fancy Pants Adventures', link: '/games/fancy-pants-adventures' },
-    { name: 'Alex In Danger', link: '/games/alex-in-danger' }    
+    { name: 'Alex In Danger', link: '/games/alex-in-danger' }
+        
   ];
 
   const filteredGames = games.filter((game) =>

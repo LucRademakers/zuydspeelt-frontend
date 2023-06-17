@@ -35,20 +35,18 @@ test('zoekterm wordt correct geüpdatet', () => {
 });
 
 
-/*
 
-// Test of de juiste actie getriggered wordt als er op een spel geklikt wordt
-test('op een spel klikken triggered de juiste actie', () => {  
-    const handleGameClick = jest.fn();
-    render(<Searchbar handleGameClick={handleGameClick} />);
+// Test of 'No matching games found.' weergegeven wordt
+test('no matching games. wordt weergegeven wanneer het zoekresultaat niet bestaat', () => {
+    render(<Searchbar />);
     const searchInput = screen.getByPlaceholderText('Search games...');
-    
-
-fireEvent.change(searchInput, { target: {value: 'Tic Tac Toe'} })
-    const gameElement = screen.getByText('Tic Tac Toe');
-    fireEvent.click(gameElement);
-    
-    expect(handleGameClick).toHaveBeenCalledWith('Tic Tac Toe');
+  
+    fireEvent.change(searchInput, { target: { value: 'Dit spel bestaat niet' } });
+  
+    const noResultsMessage = screen.getByText('No matching games found.');
+    expect(noResultsMessage).toBeInTheDocument();
 });
 
-*/
+
+
+
