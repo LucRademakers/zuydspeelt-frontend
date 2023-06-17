@@ -1,5 +1,6 @@
 import Searchbar from "@/app/components/searchbar"
 import Link from 'next/link';
+import Image from 'next/image'
 
 export default function FancyPantsAdventures() {
     
@@ -7,24 +8,22 @@ export default function FancyPantsAdventures() {
         <div>
             <Link href='/'>Home</Link>                        
 
-            <div style={{ display: 'flex', justifyContent: 'center' }}>
+            <div>
                 {<Searchbar />}
             </div>
 
-            <h1 style={{ fontWeight: 'bold', fontSize: '40px', display: 'grid', placeItems: 'center' }}>
-                Fancy Pants Adventures
+            <h1 className = "font-bold text-4xl grid place-items-center mt-20">
+                {"Fancy Pants Adventures"}
             </h1>
 
-            <div style={{ display: 'grid', placeItems: 'center', height: '70vh' }}>
-                <img  
-                    src="/fancy-pants-adventures.jpg" 
-                    style={{ height: '500px', width: '800px' }}
+            <div className = "grid place-items-center mt-20">
+                <Image                     
+                    src="/fancy-pants-adventures.jpg"                                       
+                    alt="Fancy Pants Adventures" 
+                    height={700}
+                    width={1000}                  
                 />   
-            </div>
-            
-        </div>
-
-        
-    )
-    
+            </div>           
+        </div>        
+    )    
 }

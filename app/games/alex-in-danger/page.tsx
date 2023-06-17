@@ -1,5 +1,6 @@
 import Searchbar from "@/app/components/searchbar"
 import Link from 'next/link';
+import Image from 'next/image'
 
 export default function AlexInDanger() {
     
@@ -7,24 +8,22 @@ export default function AlexInDanger() {
         <div>
             <Link href='/'>Home</Link>                        
 
-            <div style={{ display: 'flex', justifyContent: 'center' }}>
+            <div>
                 {<Searchbar />}
             </div>
 
-            <h1 style={{ fontWeight: 'bold', fontSize: '40px', display: 'grid', placeItems: 'center' }}>
-                Alex in Danger
+            <h1 className = "font-bold text-4xl grid place-items-center mt-20">
+                {"Alex In Danger"}
             </h1>
 
-            <div style={{ display: 'grid', placeItems: 'center', height: '70vh' }}>
-                <img  
-                    src="/alex-in-danger.jpg" 
-                    style={{ height: '500px', width: '800px' }}
+            <div className = "grid place-items-center mt-20">
+                <Image                     
+                    src="/alex-in-danger.jpg"                                       
+                    alt="Alex In Danger" 
+                    height={700}
+                    width={1000}                  
                 />   
-            </div>
-            
-        </div>
-
-        
-    )
-    
+            </div>           
+        </div>        
+    )    
 }

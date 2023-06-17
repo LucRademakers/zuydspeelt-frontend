@@ -36,8 +36,8 @@ export default function Searchbar() {
   };
 
   return (
-    <div className="flex justify-center absolute top-0 z-100">
-      <div className="w-80 m-auto filter drop-shadow-md">
+    <div className = "flex justify-center top-0 w-full absolute z-10">
+      <div className = "w-80 filter drop-shadow-md absolute">
         <input
           type="text"
           value={searchTerm}
