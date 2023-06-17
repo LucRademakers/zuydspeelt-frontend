@@ -1,5 +1,5 @@
 import { render, screen, fireEvent } from '@testing-library/react';
-import Searchbar from '@/app/components/searchbar';
+import Searchbar from '@/components/Searchbar';
 import '@testing-library/jest-dom';
 
 // useRouter wordt hier gemocked; anders werken de tests niet

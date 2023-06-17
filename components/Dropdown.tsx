@@ -1,7 +1,7 @@
 "use client";
 
 // install npm install @headlessui/react
-import { Menu, Transition } from '@headlessui/react'
+import { Menu, Transition } from '@headlessui/react';
 import Link from 'next/link';
 import { Fragment } from 'react';
 
@@ -12,11 +12,11 @@ const links = [
   { href: '/sign-out', label: 'Sign out' },
 ]
 
-export default function Dropdown()  {
+export default function Dropdown() {
   return (
 
-    
-  
+
+
 
     <Menu>
       <Menu.Button>Profiel</Menu.Button>
@@ -29,26 +29,25 @@ export default function Dropdown()  {
         leaveFrom="transform scale-100 opacity-100"
         leaveTo="transform scale-95 opacity-0"
       >
-      <Menu.Items>
-    
-        {links.map((link) => (
-          <Menu.Item key={link.href} as={Fragment}>
-            {({ active }) => (
-              <Link href={link.href}>
-              <button
-              
-                className={`${
-                  active ? 'bg-blue-500 text-white' : '' }
+        <Menu.Items>
+
+          {links.map((link) => (
+            <Menu.Item key={link.href} as={Fragment}>
+              {({ active }) => (
+                <Link href={link.href}>
+                  <button
+
+                    className={`${active ? 'bg-blue-500 text-white' : ''}
                   w-full rounded-md p-2`}
-              >
-                {link.label}
-              
-              </button>
-              </Link>
-            )}
-          </Menu.Item>
-        ))}
-      </Menu.Items>
+                  >
+                    {link.label}
+
+                  </button>
+                </Link>
+              )}
+            </Menu.Item>
+          ))}
+        </Menu.Items>
       </Transition>
     </Menu>
   )

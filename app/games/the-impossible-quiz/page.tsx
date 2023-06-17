@@ -1,4 +1,4 @@
-import Searchbar from "@/app/components/searchbar"
+import Searchbar from "@/components/Searchbar"
 import Link from 'next/link';
 import Image from 'next/image'
 
