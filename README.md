@@ -42,12 +42,12 @@ npm install react
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 
-## Downloading headlessui pacakges
+## Downloading Material UI pacakges
 
-Use the following line the install the headlessui packages:
+Use the following line the install the Material UI packages:
 
 ```bash
-npm install @headlessui/react
+npm install @mui/material @emotion/react @emotion/styled
 ```
 
 ## Getting Started
