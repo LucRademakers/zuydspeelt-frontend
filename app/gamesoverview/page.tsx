@@ -6,7 +6,6 @@ import 'tailwindcss/tailwind.css';
 export default function GamesOverview() {
   const containerStyle = {
     // backgroundImage: "url('https://images.pexels.com/photos/3165335/pexels-photo-3165335.jpeg')",
-    backgroundColor: 'bg-custom-blue',
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     height: '100vh',
@@ -15,6 +14,7 @@ export default function GamesOverview() {
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
+    backgroundColor: '#adc6e2',
   };
 
   const buttonStyle = 'border-black rounded-lg py-3 px-14 bg-blue-300 text-white text-sm';
