@@ -50,7 +50,7 @@ jobs:
 
     - name: Build & Push Image To Docker Hub
       run: |
-        docker build -t ${{ secrets.DOCKER_USERNAME }}/${{ secrets.DOCKER_REPOSITORY_PROD }}:${{ env.version }} ./DockerfilePROD
+        docker build . -f prod.Dockerfile -t ${{ secrets.DOCKER_USERNAME }}/${{ secrets.DOCKER_REPOSITORY_PROD }}:${{ env.version }}
         docker push ${{ secrets.DOCKER_USERNAME }}/${{ secrets.DOCKER_REPOSITORY_PROD }}:${{ env.version }}
       
     - name: Deploy Current Version To Azure Web App Service
