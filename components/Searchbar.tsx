@@ -21,7 +21,7 @@ export default function Searchbar() {
 
   const filteredGames = games ? games.filter((game) =>
     game.title.toLowerCase().includes(searchTerm.toLowerCase())
-  ) : [];
+  ).sort((a, b) => a.title.localeCompare(b.title)) : [];
 
   // Wanneer op een game geklikt wordt, wordt de gebruiker naar het desbetreffende spel gestuurd.
   const handleGameClick = (game: string) => {
@@ -46,9 +46,9 @@ export default function Searchbar() {
 
         {searchTerm && (
           <div className="search-results bg-whitesmoke p-0">
-            <ul className="mt-1 bg-white p-2 rounded-md">
+            <ul className="max-h-80 overflow-y-auto mt-1 bg-white p-2 rounded-md">
               {filteredGames.length > 0 ? (
-                filteredGames.map((game) => (
+                filteredGames.map((game) => (                  
                   <li
                     key={game.id}
                     onClick={() => handleGameClick(game.title)}
@@ -57,7 +57,7 @@ export default function Searchbar() {
                     <Link legacyBehavior href={game.title}>
                       <a>{game.title}</a>
                     </Link>
-                  </li>
+                  </li>                  
                 ))
               ) : (
                 <li>No matching games found.</li>
