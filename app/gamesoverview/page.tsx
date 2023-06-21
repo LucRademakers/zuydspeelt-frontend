@@ -1,9 +1,11 @@
 import React from 'react';
 import Link from 'next/link';
+import 'tailwindcss/tailwind.css';
+
 
 export default function GamesOverview() {
   const containerStyle = {
-    backgroundImage: "url('https://images.pexels.com/photos/3165335/pexels-photo-3165335.jpeg')",
+    // backgroundImage: "url('https://images.pexels.com/photos/3165335/pexels-photo-3165335.jpeg')",
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     height: '100vh',
@@ -12,14 +14,15 @@ export default function GamesOverview() {
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
+    backgroundColor: '#adc6e2',
   };
 
-  const buttonStyle = 'border-2 border-black rounded-lg py-3 px-10 bg-blue-500 text-lg';
+  const buttonStyle = 'border-black rounded-lg py-3 px-14 bg-blue-300 text-white text-sm';
 
   return (
     <div style={containerStyle}>
       <div>
-        <h2 style={{ fontSize: '56px' }} className="text-blue-500">Games Overview</h2>
+        <h2 style={{ fontSize: '56px' }} className="text-gray-700">Games Overview</h2>
       </div>
       <div style={{ marginTop: '150px', display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '25px 120px' }}>
         <Link href="/game1">
