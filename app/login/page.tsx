@@ -7,12 +7,14 @@ import * as React from 'react';
 import Box from '@mui/material/Box';
 import InputAdornment from '@mui/material/InputAdornment';
 import TextField from '@mui/material/TextField';
-import { Button } from '@mui/material';
 
 export default function Login() {
 
-  const goToHome = () => {
-    window.location.href = "/";
+  function checkCredentials() {
+    //code to check credentials
+    //if credentials are correct, go to home page
+    //else, display error message
+
   }
   
 
@@ -25,8 +27,7 @@ export default function Login() {
           <Mail style={{ color: 'white', fontSize: 48 }}/>  
         </div>
 
-        <form className="p-12 md:p-24">
-
+        <form className="p-12 md:p-24" action="/" onSubmit={checkCredentials}>
           <div className="flex items-center text-lg mb-6 md:mb-8">
             <div className="bg-gray-200 pl-4 py-3 w-full">
                 <Box>
@@ -74,15 +75,20 @@ export default function Login() {
             <Link href="/register">Don&apos;t have an account yet?  Sign Up</Link>
           </div>
 
-          <div className="flex justify-center">           
-          
-            <Button 
+          <div className="flex justify-center"> 
+
+            <input 
+              type="submit" 
+              value="Sign in" 
+              className="bg-black text-white px-4 py-3 rounded-full focus:outline-none cursor-pointer hover:bg-indigo-600 transition duration-300" 
+              />
+            {/* <Button 
               style={{backgroundColor: 'black', color: 'white', width: 275}}
 
               onClick={goToHome}
               variant="contained">
               Sign in
-            </Button> 
+            </Button>  */}
           </div> 
       </form>
     </div>

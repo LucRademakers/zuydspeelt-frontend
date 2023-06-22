@@ -3,8 +3,11 @@ import { Lock } from "@mui/icons-material";
 import { Button, InputAdornment, TextField } from "@mui/material";
 
 export default function Register() {
-  const goToLogin = () => {
-    window.location.href = "/login";
+  function createUser() {
+    //code to create user
+    //if user is created, go to home page
+    //else, display error message
+
   };
 
   return (
@@ -261,15 +264,22 @@ export default function Register() {
             </div>
           </div>
 
-          <div className="flex justify-center">
-            <Button
+          <form className="flex justify-center" action="/login" onSubmit={createUser}>
+            
+            <input 
+              type="submit" 
+              value="Sign up" 
+              className="bg-black text-white px-4 py-3 rounded-full focus:outline-none cursor-pointer hover:bg-indigo-600 transition duration-300" 
+              />
+
+            {/* <Button
               style={{ backgroundColor: "black", color: "white", width: 275 }}
               onClick={goToLogin}
               variant="contained"
             >
               Register now
-            </Button>
-          </div>
+            </Button> */}
+          </form>
         </div>
       </div>
     </div>
