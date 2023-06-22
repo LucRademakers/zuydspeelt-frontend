@@ -42,7 +42,7 @@ export default function GamesOverview() {
         </Link>
       </div>
 
-      <div className="fixed bottom-4 right-4">
+      {/* <div className="fixed bottom-4 right-4">
         <Link href="/pagetwo">
           <button className="border border-black rounded-lg py-2 px-4 bg-blue-300 text-white text-sm">
             Go to Page Two
@@ -53,9 +53,9 @@ export default function GamesOverview() {
             Go to Page Three
           </button>
         </Link>
-      </div>
+      </div> */}
 
-      <Navigation /> {/* Include the Navigation component */}
+      <Navigation /> 
     </div>
   );
 }
