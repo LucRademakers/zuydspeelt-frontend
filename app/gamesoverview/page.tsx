@@ -4,7 +4,7 @@ import 'tailwindcss/tailwind.css';
 
 export default function GamesOverview() {
   return (
-    <div className="bg-custom-blue bg-cover bg-center h-screen w-screen flex flex-col justify-center items-center">
+    <div className="bg-blue-200 bg-cover bg-center h-screen w-screen flex flex-col justify-center items-center">
       <div>
         <h2 className="text-4xl text-gray-700">Games Overview</h2>
       </div>
