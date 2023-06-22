@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import 'tailwindcss/tailwind.css';
+import Navigation from './navigation';
 
 export default function GamesOverview() {
   return (
@@ -40,6 +41,21 @@ export default function GamesOverview() {
           </button>
         </Link>
       </div>
+
+      <div className="fixed bottom-4 right-4">
+        <Link href="/pagetwo">
+          <button className="border border-black rounded-lg py-2 px-4 bg-blue-300 text-white text-sm">
+            Go to Page Two
+          </button>
+        </Link>
+        <Link href="/pagethree">
+          <button className="border border-black rounded-lg py-2 px-4 bg-blue-300 text-white text-sm mt-2">
+            Go to Page Three
+          </button>
+        </Link>
+      </div>
+
+      <Navigation /> {/* Include the Navigation component */}
     </div>
   );
 }
