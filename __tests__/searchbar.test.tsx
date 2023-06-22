@@ -3,22 +3,32 @@ import Searchbar from '@/components/Searchbar';
 import '@testing-library/jest-dom';
 
 // useRouter wordt hier gemocked; anders werken de tests niet
-
 jest.mock('next/navigation', () => ({
     useRouter: jest.fn(),
 }));
 
 
+// useFetch wordt hier gemocked; anders werken de tests niet
+jest.mock('../hooks/useFetch', () => ({
+    __esModule: true,
+    default: () => ({
+      data: [
+        { id: 1, title: 'Game 1' },
+        { id: 2, title: 'Game 2' },
+      ],
+      error: null,
+    }),
+}));
 
+  
 // Test of de searchbar correct gerendered wordt
-test('rendered de zoekbalk zonder foutmeldingen', () => {    
+test('Rendered de zoekbalk', () => {    
     render(<Searchbar />);
 })
 
-
   
 // Test of de correcte placeholder tekst aanwezig is ('Search games...')
-test('correcte placeholder tekst', () => {
+test('Correcte placeholder tekst', () => {
     render(<Searchbar />);
     const Search = screen.getByPlaceholderText('Search games...');
     expect(Search).toBeInTheDocument();
@@ -27,17 +37,16 @@ test('correcte placeholder tekst', () => {
 
 
 // Test of de zoekterm correct geüpdatet wordt
-test('zoekterm wordt correct geüpdatet', () => {
+test('Zoekterm wordt correct geüpdatet', () => {
     render(<Searchbar />);
     const inputElement = screen.getByPlaceholderText('Search games...') as HTMLInputElement;
-    fireEvent.change(inputElement, { target: { value: 'Tic Tac Toe' } });
-    expect(inputElement.value).toBe('Tic Tac Toe');
+    fireEvent.change(inputElement, { target: { value: 'Game 1' } });
+    expect(inputElement.value).toBe('Game 1');
 });
 
 
-
 // Test of 'No matching games found.' weergegeven wordt
-test('no matching games. wordt weergegeven wanneer het zoekresultaat niet bestaat', () => {
+test('"No matching games." wordt weergegeven wanneer het zoekresultaat niet bestaat', () => {
     render(<Searchbar />);
     const searchInput = screen.getByPlaceholderText('Search games...');
   
