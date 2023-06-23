@@ -15,7 +15,7 @@ const Home = () => {
       <Link href='/'>Home</Link>
 
       <div className="header-links right">
-      <Link href='/leaderboard/Action'>Leaderboard</Link>
+      <Link href='/leaderboard/action'>Leaderboard</Link>
       </div>
 
       <p  className='text-2xl text-center mt-[50px] mb-[50px]'>ACTION</p>
