@@ -2,7 +2,7 @@ import Searchbar from "@/components/Searchbar"
 import Link from 'next/link';
 import Image from 'next/image'
 
-export default function Action() {
+export default function Puzzle() {
     
     return (
         <div>
@@ -13,7 +13,7 @@ export default function Action() {
             </div>
 
             <h1 className = "font-bold text-4xl grid place-items-center mt-20">
-                {"Action"}
+                {"Puzzle"}
             </h1>
 
             <div className="flex justify-center gap-8"> 

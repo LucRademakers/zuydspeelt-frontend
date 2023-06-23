@@ -2,7 +2,7 @@ import Searchbar from "@/components/Searchbar"
 import Link from 'next/link';
 import Image from 'next/image'
 
-export default function Action() {
+export default function Sport() {
     
     return (
         <div>
@@ -13,14 +13,14 @@ export default function Action() {
             </div>
 
             <h1 className = "font-bold text-4xl grid place-items-center mt-20">
-                {"Action"}
+                {"Sport"}
             </h1>
 
             <div className="flex justify-center gap-8"> 
         <div className="w-1/5 lg:w-1/5 pr-1 border border-gray-500"> 
           <h2 className="text-2xl font-semibold mb-4 text-center">Spel 1</h2>
           <table className="mt-2 ml-0">
-          <thead>
+        <thead>
           <tr>
             <th>Rank</th>
             <th className="w-32">Name</th>

@@ -1,28 +1,356 @@
-import Image from "next/image";
-import Link from "next/link";
-import React from "react";
+import Image from 'next/image'
+import Link from 'next/link';
+import React from 'react';
 import Dropdown from "@/components/Dropdown";
 import Searchbar from "@/components/Searchbar";
 
+ 
+
+ 
+
+
+
 const Home = () => {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
+    <main className="flex min-h-screen flex-col items-center justify-between p-30">
+
       <Searchbar />
 
       <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none"></div>
+    
+        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
+         
+        </div>
       </div>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
+      <div className="flex justify-center gap-8"> 
+        <div className="w-full lg:w-1/5 pr-1 border border-gray-500"> 
+          <h2 className="text-2xl font-semibold mb-4 text-center">ACTION</h2>
+          <table className="mt-2 ml-0">
+        <thead>
+          <tr>
+            <th>Rank</th>
+            <th className="w-32">Name</th>
+            <th className="text-right">Score</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td className="w-32">Player 1</td>
+            <td className="text-right">1000</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Player 2</td>
+            <td className="text-right">950</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td className="w-32">Player 3</td>
+            <td className="text-right">900</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td className="w-32">Player 4</td>
+            <td className="text-right">850</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td className="w-32">Player 5</td>
+            <td className="text-right">800</td>
+          </tr>
+          <tr>
+            <td>6</td>
+            <td className="w-32">Player 1</td>
+            <td className="text-right">1000</td>
+          </tr>
+          <tr>
+            <td>7</td>
+            <td>Player 2</td>
+            <td className="text-right">950</td>
+          </tr>
+          <tr>
+            <td>8</td>
+            <td className="w-32">Player 3</td>
+            <td className="text-right">900</td>
+          </tr>
+          <tr>
+            <td>9</td>
+            <td className="w-32">Player 4</td>
+            <td className="text-right">850</td>
+          </tr>
+          <tr>
+            <td>10</td>
+            <td className="w-32">Player 5</td>
+            <td className="text-right">800</td>
+          </tr>
+        </tbody>
+      </table>
       </div>
+
+      <div className="w-full lg:w-1/5 pr-1 border border-gray-500"> 
+          <h2 className="text-2xl font-semibold mb-4 text-center">PUZZLE</h2>
+          <table className="mt-2 ml-0">
+          <thead>
+          <tr>
+            <th>Rank</th>
+            <th className="w-32">Name</th>
+            <th className="text-right">Score</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td className="w-32">Player 1</td>
+            <td className="text-right">1000</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Player 2</td>
+            <td className="text-right">950</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td className="w-32">Player 3</td>
+            <td className="text-right">900</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td className="w-32">Player 4</td>
+            <td className="text-right">850</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td className="w-32">Player 5</td>
+            <td className="text-right">800</td>
+          </tr>
+          <tr>
+            <td>6</td>
+            <td className="w-32">Player 1</td>
+            <td className="text-right">1000</td>
+          </tr>
+          <tr>
+            <td>7</td>
+            <td>Player 2</td>
+            <td className="text-right">950</td>
+          </tr>
+          <tr>
+            <td>8</td>
+            <td className="w-32">Player 3</td>
+            <td className="text-right">900</td>
+          </tr>
+          <tr>
+            <td>9</td>
+            <td className="w-32">Player 4</td>
+            <td className="text-right">850</td>
+          </tr>
+          <tr>
+            <td>10</td>
+            <td className="w-32">Player 5</td>
+            <td className="text-right">800</td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+
+      <div className="w-full lg:w-1/5 pr-1 border border-gray-500"> {/* Adjusted width and added right padding */}
+          <h2 className="text-2xl font-semibold mb-4 text-center">MULTIPLAYER</h2>
+          <table className="mt-2 ml-0">
+          <thead>
+          <tr>
+            <th>Rank</th>
+            <th className="w-32">Name</th>
+            <th className="text-right">Score</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td className="w-32">Player 1</td>
+            <td className="text-right">1000</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Player 2</td>
+            <td className="text-right">950</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td className="w-32">Player 3</td>
+            <td className="text-right">900</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td className="w-32">Player 4</td>
+            <td className="text-right">850</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td className="w-32">Player 5</td>
+            <td className="text-right">800</td>
+          </tr>
+          <tr>
+            <td>6</td>
+            <td className="w-32">Player 1</td>
+            <td className="text-right">1000</td>
+          </tr>
+          <tr>
+            <td>7</td>
+            <td>Player 2</td>
+            <td className="text-right">950</td>
+          </tr>
+          <tr>
+            <td>8</td>
+            <td className="w-32">Player 3</td>
+            <td className="text-right">900</td>
+          </tr>
+          <tr>
+            <td>9</td>
+            <td className="w-32">Player 4</td>
+            <td className="text-right">850</td>
+          </tr>
+          <tr>
+            <td>10</td>
+            <td className="w-32">Player 5</td>
+            <td className="text-right">800</td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+
+      <div className="w-full lg:w-1/5 pr-1 border border-gray-500"> {/* Adjusted width and added right padding */}
+          <h2 className="text-2xl font-semibold mb-4 text-center">RACE</h2>
+          <table className="mt-2 ml-0">
+          <thead>
+          <tr>
+            <th>Rank</th>
+            <th className="w-32">Name</th>
+            <th className="text-right">Score</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td className="w-32">Player 1</td>
+            <td className="text-right">1000</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Player 2</td>
+            <td className="text-right">950</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td className="w-32">Player 3</td>
+            <td className="text-right">900</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td className="w-32">Player 4</td>
+            <td className="text-right">850</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td className="w-32">Player 5</td>
+            <td className="text-right">800</td>
+          </tr>
+          <tr>
+            <td>6</td>
+            <td className="w-32">Player 1</td>
+            <td className="text-right">1000</td>
+          </tr>
+          <tr>
+            <td>7</td>
+            <td>Player 2</td>
+            <td className="text-right">950</td>
+          </tr>
+          <tr>
+            <td>8</td>
+            <td className="w-32">Player 3</td>
+            <td className="text-right">900</td>
+          </tr>
+          <tr>
+            <td>9</td>
+            <td className="w-32">Player 4</td>
+            <td className="text-right">850</td>
+          </tr>
+          <tr>
+            <td>10</td>
+            <td className="w-32">Player 5</td>
+            <td className="text-right">800</td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+
+      <div className="w-full lg:w-1/5 border border-gray-500"> {/* Adjusted width */}
+          <h2 className="text-2xl font-semibold mb-4 text-center">SPORT</h2>
+          <table className="mt-2 ml-0">
+          <thead>
+          <tr>
+            <th>Rank</th>
+            <th className="w-32">Name</th>
+            <th className="text-right">Score</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td className="w-32">Player 1</td>
+            <td className="text-right">1000</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Player 2</td>
+            <td className="text-right">950</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td className="w-32">Player 3</td>
+            <td className="text-right">900</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td className="w-32">Player 4</td>
+            <td className="text-right">850</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td className="w-32">Player 5</td>
+            <td className="text-right">800</td>
+          </tr>
+          <tr>
+            <td>6</td>
+            <td className="w-32">Player 1</td>
+            <td className="text-right">1000</td>
+          </tr>
+          <tr>
+            <td>7</td>
+            <td>Player 2</td>
+            <td className="text-right">950</td>
+          </tr>
+          <tr>
+            <td>8</td>
+            <td className="w-32">Player 3</td>
+            <td className="text-right">900</td>
+          </tr>
+          <tr>
+            <td>9</td>
+            <td className="w-32">Player 4</td>
+            <td className="text-right">850</td>
+          </tr>
+          <tr>
+            <td>10</td>
+            <td className="w-32">Player 5</td>
+            <td className="text-right">800</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    </div>
+
+
 
       {/* <div className="mb-32 grid text-center lg:mb-0 lg:grid-cols-4 lg:text-left">
         <Link href="/gamesoverview">
@@ -45,7 +373,7 @@ const Home = () => {
           rel="noopener noreferrer"
         >
           <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{" "}
+            Docs{' '}
             <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
               -&gt;
             </span>
@@ -62,7 +390,7 @@ const Home = () => {
           rel="noopener noreferrer"
         >
           <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{" "}
+            Learn{' '}
             <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
               -&gt;
             </span>
@@ -79,7 +407,7 @@ const Home = () => {
           rel="noopener noreferrer"
         >
           <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{" "}
+            Templates{' '}
             <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
               -&gt;
             </span>
@@ -96,7 +424,7 @@ const Home = () => {
           rel="noopener noreferrer"
         >
           <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{" "}
+            Deploy{' '}
             <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
               -&gt;
             </span>
@@ -107,7 +435,7 @@ const Home = () => {
         </a>
       </div>
     </main>
-  );
-};
+  )
+}
 
 export default Home;
