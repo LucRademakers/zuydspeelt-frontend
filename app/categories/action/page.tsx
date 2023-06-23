@@ -6,11 +6,6 @@ import Searchbar from "@/components/Searchbar";
 import 'tailwindcss/tailwind.css';
 
  
-
- 
-
-
-
 const Home = () => {
   return (
     <main>
