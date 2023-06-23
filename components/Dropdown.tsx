@@ -1,13 +1,13 @@
-"use client";
+'use client';
 
 //installeer library materialui: 'npm install @mui/material @emotion/react @emotion/styled'
 
-import { Button, Menu, MenuItem } from "@mui/material";
-import Link from "next/link";
-import React, { useState } from "react";
+import { Button, Menu, MenuItem } from '@mui/material';
+import Link from 'next/link';
+import React, { useState } from 'react';
 
 interface DropdownMenuProps {
-  options: { value: number; label: string; path: string }[];
+  options: { value: number; label: string;  path: string }[];
   buttonName: string;
 }
 
@@ -40,9 +40,7 @@ class DropdownMenu extends React.Component<
 
     return (
       <div>
-        <Button color="inherit" onClick={this.handleClick}>
-          {buttonName}
-        </Button>
+        <Button color='inherit' onClick={this.handleClick}>{buttonName}</Button>
         <Menu
           anchorEl={anchorEl}
           open={Boolean(anchorEl)}
@@ -50,7 +48,7 @@ class DropdownMenu extends React.Component<
         >
           {options.map((option) => (
             <MenuItem key={option.value} onClick={this.handleClose}>
-              <Link href={option.path}>{option.label}</Link>
+             <Link href={option.path}>{option.label}</Link>
             </MenuItem>
           ))}
         </Menu>
