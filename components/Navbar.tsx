@@ -1,15 +1,14 @@
 "use client";
 
 // installeer library icons: 'npm install @mui/icons-material'
-import { Attractions } from "@mui/icons-material";
-import {
-  AppBar,
-  Toolbar,
-  IconButton,
-  Typography,
-  Stack,
-  Button,
-} from "@mui/material";
+import Attractions from "@mui/icons-material/Attractions";
+import AppBar from "@mui/material/AppBar";
+import Toolbar from "@mui/material/Toolbar";
+import IconButton from "@mui/material/IconButton";
+import Typography from "@mui/material/Typography";
+import Stack from "@mui/material/Stack";
+import Button from "@mui/material/Button";
+
 import DropdownMenu from "./Dropdown";
 
 // Zet hier je dropdown Items
