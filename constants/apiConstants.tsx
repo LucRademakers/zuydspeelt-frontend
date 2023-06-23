@@ -1,4 +1,4 @@
-const API_BASE_URL = 'http://localhost:8080/api/';
+const API_BASE_URL = 'https://zuydspeeltapi-dev.azurewebsites.net/api/';
 
 export enum API_ENDPOINT {
     BASE_URL = API_BASE_URL,
