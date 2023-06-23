@@ -4,7 +4,7 @@ export default function SpecificLeaderboard() {
       <div className="flex-auto bg-orange-300 px-2 py-2">
         <div className=" text-gray-700 text-center">GameName</div>
 
-        <div className="text-gray-700 text-right">Total</div>
+        <div className="text-gray-700 text-right">SCORE</div>
       </div>
 
       <div className="flex px-2 py-2 items-center">
@@ -58,20 +58,35 @@ export default function SpecificLeaderboard() {
       </div>
 
       <div className="sm:block border-t border-gray-300">
+        <p className="text-center text-gray-500 m-1 uppercase">Your score</p>
+        <div className="flex justify-center items-center">
+          <div className="w-1/2 px-2 pt-2 pb-5 text-center">
+            <p className="font-bold text-lg">GamerName</p>
+            <p className="text-gray-600">120.000 SCORE</p>
+            <p className="text-gray-600">Position: 657</p>
+          </div>
+        </div>
+      </div>
+
+      <div className="sm:block border-t border-gray-300">
         <p className="text-center text-gray-500 m-1 uppercase">All time high</p>
         <div className="flex justify-center items-center">
           <div className="w-1/2 px-2 pt-2 pb-5 text-center">
             <p className="font-bold text-lg">GamerName</p>
-            <p className="text-gray-600">120.000 Total</p>
+            <p className="text-gray-600">120.000 SCORE</p>
           </div>
         </div>
       </div>
 
       <div className="border-t bg-orange-300 text-center px-1 py-1">
-        <p className="text-gray-600">Last months top</p>
+        <p className="text-gray-600">LAST MONTHS TOP 3</p>
       </div>
 
       <div className="flex bg-orange-300">
+        <div className="w-1/2 px-2 py-2 text-center">
+          <p className="font-semibold text-gray-700">GamerName</p>
+          <p className="font-light text-gray-600">Total 500</p>
+        </div>
         <div className="w-1/2 px-2 py-2 text-center">
           <p className="font-semibold text-gray-700">GamerName</p>
           <p className="font-light text-gray-600">Total 500</p>
