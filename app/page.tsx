@@ -1,7 +1,5 @@
 import Image from "next/image";
-import Link from "next/link";
 import React from "react";
-import Dropdown from "@/components/Dropdown";
 import Searchbar from "@/components/Searchbar";
 
 const Home = () => {

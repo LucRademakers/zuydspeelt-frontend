@@ -39,3 +39,4 @@ next-env.d.ts
 .FileContentIndex/read.lock
 ./v17/.wsuo
 .vs/slnx.sqlite
+.vs/VSWorkspaceState.json
