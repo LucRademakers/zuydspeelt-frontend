@@ -46,7 +46,7 @@ export default function Searchbar() {
 
         {searchTerm && (
           <div className="search-results bg-whitesmoke p-0">
-            <ul className="max-h-80 overflow-y-auto mt-1 bg-white p-2 rounded-md">
+            <ul className="max-h-80 overflow-y-auto mt-1 text-gray-700 bg-white p-2 rounded-md">
               {filteredGames.length > 0 ? (
                 filteredGames.map((game) => (                  
                   <li
