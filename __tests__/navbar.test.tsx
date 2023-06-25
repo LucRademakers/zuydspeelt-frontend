@@ -16,7 +16,7 @@ test('Renderen van de navigatiebalk', () => {
 //Test m.b.t. de klikbaarheid & navigatie van het logo
 test('Klikbaarheid & Navigatie van het logo', () => {
     render(<IconButton />);
-    const testLOGO = screen.getByText('logo');
+    const testLOGO = screen.getByText('button');
     fireEvent.click(testLOGO);
     expect(testLOGO.getAttribute('href')).toBeDefined();
 });
