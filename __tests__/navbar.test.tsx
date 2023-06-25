@@ -3,6 +3,10 @@ import { Navbar } from '@/components/Navbar';
 import DropdownMenu from '@/components/Dropdown';
 import '@testing-library/jest-dom';
 
+jest.mock('next/navigation', () => ({
+    useRouter: jest.fn(),
+}));
+
 jest.mock('@mui/icons-material', () => ({
   Attractions: () => <span data-testid="attractions-icon" />,
 }));
