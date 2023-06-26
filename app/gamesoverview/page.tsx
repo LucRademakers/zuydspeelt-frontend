@@ -10,7 +10,7 @@ export default function GamesOverview() {
         <h2 className="text-4xl text-gray-700">Games Overview</h2>
       </div>
       <div className="mt-12 grid grid-cols-2 gap-x-20 gap-y-8">
-        <Link href="/game1">
+        <Link href="gamesoverview/games/game1/">
           <button className="border-black rounded-lg py-3 px-14 bg-blue-300 text-white text-sm">
             Game 1
           </button>

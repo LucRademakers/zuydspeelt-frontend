@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import Home from '@/app/page';
+import Home from '@/app/gamesoverview/games/game1/page';
 import '@testing-library/jest-dom';
 
 // Example test that verifies the Next.js logo is present on the home page
