@@ -42,9 +42,19 @@ export default function GamesOverview() {
         </Link>
       </div>
       <div className="fixed bottom-20 right-20">
+      <Link href="gamesoverview/">
+        <button className="border border-gray-300 rounded-full py-2 px-4 bg-blue-300 text-white">
+          1
+        </button>
+      </Link>
       <Link href="gamesoverview/page2">
         <button className="border border-gray-300 rounded-full py-2 px-4 bg-blue-500 text-white">
-          Page 2
+          2
+        </button>
+      </Link>
+      <Link href="gamesoverview/page3">
+        <button className="border border-gray-300 rounded-full py-2 px-4 bg-blue-500 text-white">
+          3
         </button>
       </Link>
       </div>
