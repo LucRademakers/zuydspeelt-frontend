@@ -4,40 +4,38 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
+import useFetch from '@/hooks/useFetch';
+import { API_ENDPOINT } from '@/constants/apiConstants';
+import { Game } from '@/types/models';
 
 
 export default function Searchbar() {
   const [searchTerm, setSearchTerm] = useState('');
   const router = useRouter();
-  
+  const { data: games, error: gamesError } = useFetch<Game[]>(API_ENDPOINT.GAMES);
 
-  // Hier kan later misschien vanuit de database games worden toegevoegd.
-  const games = [
-    { name: 'Tic Tac Toe', link: '/games/tic-tac-toe' },
-    { name: 'The World\'s Hardest Game', link: '/games/the-worlds-hardest-game' },
-    { name: 'The Impossible Quiz', link: '/games/the-impossible-quiz' },
-    { name: 'Fancy Pants Adventures', link: '/games/fancy-pants-adventures' },
-    { name: 'Alex In Danger', link: '/games/alex-in-danger' }
-        
-  ];
+  if (gamesError) {
+    console.error("SEARHCBAR ERROR " + gamesError);
+  }
 
-  const filteredGames = games.filter((game) =>
-    game.name.toLowerCase().includes(searchTerm.toLowerCase())
-  );
+
+  const filteredGames = games ? games.filter((game) =>
+    game.title.toLowerCase().includes(searchTerm.toLowerCase())
+  ).sort((a, b) => a.title.localeCompare(b.title)) : [];
 
   // Wanneer op een game geklikt wordt, wordt de gebruiker naar het desbetreffende spel gestuurd.
   const handleGameClick = (game: string) => {
-    
-    const gameLink = games.find((item) => item.name === game)?.link;   
+
+    const gameLink = games?.find((item) => item.title);
 
     if (gameLink) {
-      router.push(gameLink);
-    }    
+      router.push(gameLink.title);
+    }
   };
 
   return (
-    <div className = "flex justify-center top-0 w-full absolute z-10">
-      <div className = "w-80 filter drop-shadow-md absolute">
+    <div className="flex justify-center top-0 w-full absolute z-10">
+      <div className="w-80 filter drop-shadow-md absolute">
         <input
           type="text"
           value={searchTerm}
@@ -48,18 +46,18 @@ export default function Searchbar() {
 
         {searchTerm && (
           <div className="search-results bg-whitesmoke p-0">
-            <ul className="mt-1 bg-white p-2 rounded-md">
+            <ul className="max-h-80 overflow-y-auto mt-1 text-gray-700 bg-white p-2 rounded-md">
               {filteredGames.length > 0 ? (
-                filteredGames.map((game) => (
+                filteredGames.map((game) => (                  
                   <li
-                    key={game.name}
-                    onClick={() => handleGameClick(game.name)}
+                    key={game.id}
+                    onClick={() => handleGameClick(game.title)}
                     className="cursor-pointer py-1 hover:bg-gray-200"
                   >
-                    <Link legacyBehavior href={game.link}>
-                      <a>{game.name}</a>
+                    <Link legacyBehavior href={game.title}>
+                      <a>{game.title}</a>
                     </Link>
-                  </li>
+                  </li>                  
                 ))
               ) : (
                 <li>No matching games found.</li>

@@ -1,0 +1,52 @@
+name: Ping Web Services in Front End
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 * * * *"
+
+env:
+  PROD_URL: ${{ secrets.PROD_URL }}
+  DEV_URL: ${{ secrets.DEV_URL }}
+  COLOR: "success"
+
+jobs:
+  ping_prod:
+    name: Ping Production Web Service
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping Webservice (Production)
+        id: ping_webservice_prod
+        run: |
+          status=$(curl --write-out "%{http_code}" --silent --connect-timeout 10 --output /dev/null $PROD_URL)
+          if [ "$status" = "200" ]; then
+            echo "SERVICE_STATUS=online" >> "$GITHUB_OUTPUT"
+          else
+            echo "SERVICE_STATUS=offline" >> "$GITHUB_OUTPUT"
+          fi
+      - name: Ping Webservice (Development)
+        id: ping_webservice_dev
+        run: |
+          status=$(curl --write-out "%{http_code}" --silent --connect-timeout 10 --output /dev/null $PROD_URL)
+          if [ "$status" = "200" ]; then
+            echo "SERVICE_STATUS=online" >> "$GITHUB_OUTPUT"
+          else
+            echo "SERVICE_STATUS=offline" >> "$GITHUB_OUTPUT"
+          fi
+      - name: Set Notification Color
+        id: set_color
+        if: ${{ steps.ping_webservice_dev.outputs.SERVICE_STATUS != 'online' || steps.ping_webservice_prod.outputs.SERVICE_STATUS != 'online'}}
+        run: |
+          echo "COLOR=failure" >> "$GITHUB_ENV"
+      - name: Send Production Status Notification
+        uses: mikesprague/teams-incoming-webhook-action@v1
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          webhook-url: ${{ secrets.MS_TEAMS_WEBHOOK_URL }}
+          title: "Scheduled Pings: Test production and development front end services and return status"
+          message: |
+            Front End Production Status: **${{ steps.ping_webservice_prod.outputs.SERVICE_STATUS }}**
+
+            Front End Development Status: **${{ steps.ping_webservice_dev.outputs.SERVICE_STATUS }}**
+          color: ${{ env.COLOR }}
+          timezone: "Europe/Amsterdam"

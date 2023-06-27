@@ -33,3 +33,10 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# binary files
+.FileContentIndex/2d9d3bdd-e572-470a-8bfb-fffde0671899.vsidx
+.FileContentIndex/read.lock
+./v17/.wsuo
+.vs/slnx.sqlite
+.vs/VSWorkspaceState.json
