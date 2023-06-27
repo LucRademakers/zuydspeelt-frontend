@@ -1,7 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
 import 'tailwindcss/tailwind.css';
-import Navigation from './navigation';
 
 export default function GamesOverview() {
   return (
