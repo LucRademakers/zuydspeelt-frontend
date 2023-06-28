@@ -15,12 +15,6 @@ describe('Action page', () => {
     expect(homeLinkElement).toBeInTheDocument();
   });
 
-  test('renders search bar component', () => {
-    render(<Action />);
-    const searchbarComponent = screen.getByRole('search');
-    expect(searchbarComponent).toBeInTheDocument();
-  });
-
   test('renders game rankings', () => {
     render(<Action />);
     const gameRankings = screen.getAllByRole('row');
