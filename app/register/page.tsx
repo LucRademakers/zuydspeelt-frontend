@@ -1,14 +1,14 @@
 "use client";
-import { Lock } from "@mui/icons-material";
-import { Button, InputAdornment, TextField } from "@mui/material";
+import Lock from "@mui/icons-material/Lock";
+import TextField from "@mui/material/TextField";
+import InputAdornment from "@mui/material/InputAdornment";
 
 export default function Register() {
   function createUser() {
     //code to create user
     //if user is created, go to home page
     //else, display error message
-
-  };
+  }
 
   return (
     <div className="md:flex w-full">
@@ -264,13 +264,16 @@ export default function Register() {
             </div>
           </div>
 
-          <form className="flex justify-center" action="/login" onSubmit={createUser}>
-            
-            <input 
-              type="submit" 
-              value="Sign up" 
-              className="bg-black text-white px-4 py-3 rounded-full focus:outline-none cursor-pointer hover:bg-indigo-600 transition duration-300" 
-              />
+          <form
+            className="flex justify-center"
+            action="/login"
+            onSubmit={createUser}
+          >
+            <input
+              type="submit"
+              value="Sign up"
+              className="bg-black text-white px-4 py-3 rounded-full focus:outline-none cursor-pointer hover:bg-indigo-600 transition duration-300"
+            />
 
             {/* <Button
               style={{ backgroundColor: "black", color: "white", width: 275 }}
