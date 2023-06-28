@@ -1,5 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import Action from '@/app/leaderboard/action/page';
+import "@testing-library/jest-dom";
 
 describe('Action page', () => {
   test('renders page title', () => {
