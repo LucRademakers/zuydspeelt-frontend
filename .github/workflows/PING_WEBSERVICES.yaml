@@ -27,7 +27,7 @@ jobs:
       - name: Ping Webservice (Development)
         id: ping_webservice_dev
         run: |
-          status=$(curl --write-out "%{http_code}" --silent --connect-timeout 10 --output /dev/null $PROD_URL)
+          status=$(curl --write-out "%{http_code}" --silent --connect-timeout 10 --output /dev/null $DEV_URL)
           if [ "$status" = "200" ]; then
             echo "SERVICE_STATUS=online" >> "$GITHUB_OUTPUT"
           else
