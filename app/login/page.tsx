@@ -9,13 +9,21 @@ import * as React from "react";
 import Box from "@mui/material/Box";
 import InputAdornment from "@mui/material/InputAdornment";
 import TextField from "@mui/material/TextField";
+import { login, useAuthenticatedUser } from "../authHandler";
 
 export default function Login() {
-  function checkCredentials() {
-    //code to check credentials
-    //if credentials are correct, go to home page
-    //else, display error message
-  }
+  const user = useAuthenticatedUser();
+  const checkCredentials = (event: any) => {
+    event.preventDefault();
+    // use login and pass from input fields
+    const username = (
+      document.getElementById("inputUsername") as HTMLInputElement
+    ).value;
+    const password = (
+      document.getElementById("inputPassword") as HTMLInputElement
+    ).value;
+    login(username, password);
+  };
 
   return (
     <div className="bg-indigo-400 h-screen overflow-hidden flex items-center justify-center">
