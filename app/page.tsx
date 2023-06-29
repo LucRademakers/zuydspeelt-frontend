@@ -105,7 +105,6 @@ const Home = () => {
           </p>
         </a>
       </div>
-      <Footer />
     </main>
   );
 };
