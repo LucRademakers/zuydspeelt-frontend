@@ -2,7 +2,7 @@
 
 Feature: Leaderboard Navigation
   As a user
-  I want to navigate to the categories action page
+  I want to navigate to the leaderboard action page
 
   Scenario: Navigate to action leaderboard page
     Given I am on the categories action page
