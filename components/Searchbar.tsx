@@ -34,7 +34,7 @@ export default function Searchbar() {
   };
 
   return (
-    <div className="flex justify-center top-0 w-full absolute z-10">
+    <div className="flex justify-center top-0 w-full mt-2.5 absolute z-10">
       <div className="w-80 filter drop-shadow-md absolute">
         <input
           type="text"
