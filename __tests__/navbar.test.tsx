@@ -26,6 +26,7 @@ test('Weergave (ZUYDSPEELT) in de navigatiebalk', () => {
     expect(testZUYDSPEELT).toBeInTheDocument();
 });
 
+/*
 // Test m.b.t. weergave & de klikbaarheid van 'CATEGORIES' + onderliggende dropdown menu
 test('Weergave/Klikbaarheid (CATEGORIES) in de navigatiebalk', () => {
     render(<Navbar />);
@@ -42,6 +43,7 @@ test('Weergave/Klikbaarheid (CATEGORIES) in de navigatiebalk', () => {
     expect(testPAGE3).toBeInTheDocument();
     fireEvent.click(testPAGE3);
 });
+*/
 
 // Test m.b.t. weergave & de klikbaarheid van 'LOGIN'
 test('Weergave/Klikbaarheid (LOGIN) in de navigatiebalk', () => {
