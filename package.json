@@ -30,7 +30,7 @@
     "next-fonts": "^1.5.1",
     "postcss": "8.4.23",
     "react": "^18.2.0",
-    "react-dom": "18.2.0",
+    "react-dom": "^18.2.0",
     "react-router-dom": "^6.13.0",
     "swr": "^2.1.5",
     "typescript": "5.0.4"
