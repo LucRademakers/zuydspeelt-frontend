@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "lib": ["es2016", "dom"],
+    "target": "es5",
+    "module": "commonjs",
+    "strict": true,
+    "types": ["node"],
+    "removeComments": true,
+    "outDir": "dist"
+  },
+  "include": ["**.ts", "src/tictactoe.ts"],
+  "exclude": ["node_modules"]
+}

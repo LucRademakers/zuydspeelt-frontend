@@ -10,19 +10,19 @@ export default function GamesOverview() {
         <h2 className="text-4xl text-gray-700">Games Overview</h2>
       </div>
       <div className="mt-12 grid grid-cols-2 gap-x-20 gap-y-8">
-        <Link href="gamesoverview/games/game1/">
+        <Link href="games/tic-tac-toe/index.html">
           <button className="border-black rounded-lg py-3 px-14 bg-blue-300 text-white text-sm">
-            Game 1
+            tic-tac-toe
           </button>
         </Link>
-        <Link href="/game2">
+        <Link href="games/2048/src/actions">
           <button className="border-black rounded-lg py-3 px-14 bg-blue-300 text-white text-sm">
-            Game 2
+            2048
           </button>
         </Link>
-        <Link href="/game3">
+        <Link href="games/snake/src/index.html">
           <button className="border-black rounded-lg py-3 px-14 bg-blue-300 text-white text-sm">
-            Game 3
+            Snek
           </button>
         </Link>
         <Link href="/game4">
