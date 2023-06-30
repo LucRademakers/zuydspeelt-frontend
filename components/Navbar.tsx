@@ -8,6 +8,7 @@ import Typography from "@mui/material/Typography";
 import Stack from "@mui/material/Stack";
 import Button from "@mui/material/Button";
 import { API_ENDPOINT } from "../constants/apiConstants";
+import Link from 'next/link';
 
 import DropdownMenu from "./Dropdown";
 import Searchbar from "@/components/Searchbar";
@@ -101,6 +102,11 @@ export const Navbar = () => {
         </Typography>
         <Stack direction="row" spacing={2}>
           {/* Zet hier je menu in de navbar. Verander de {options} met de naam die je de const had gegeven boveaan de pagina en geef de knop een naam */}
+          <Link href='gamesoverview/'>
+            <Button color="inherit" href="gamesoverview/">
+            Gamesoverview
+            </Button>
+          </Link>
           <CategoriesDropDown />
           <DropdownMenu options={games} buttonName="Games" />
           <LoginButton />
