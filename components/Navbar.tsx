@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 // installeer library icons: 'npm install @mui/icons-material'
 import Attractions from "@mui/icons-material/Attractions";
