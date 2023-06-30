@@ -10,7 +10,7 @@ export default function GamesOverview() {
         <h2 className="text-4xl text-gray-700">Games Overview</h2>
       </div>
       <div className="mt-12 grid grid-cols-2 gap-x-20 gap-y-8">
-        <Link href="games/tic-tac-toe/index.html">
+        <Link href="games/tic-tac-toe/src">
           <button className="border-black rounded-lg py-3 px-14 bg-blue-300 text-white text-sm">
             tic-tac-toe
           </button>
@@ -25,7 +25,7 @@ export default function GamesOverview() {
             Snek
           </button>
         </Link>
-        <Link href="/game4">
+        <Link href="games/racing-game-main">
           <button className="border-black rounded-lg py-3 px-14 bg-blue-300 text-white text-sm">
             Game 4
           </button>
