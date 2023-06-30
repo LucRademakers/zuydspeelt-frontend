@@ -42,7 +42,11 @@ function CategoriesDropDown(props: any): JSX.Element {
             };
           })
         )
-      : [{ value: 1, label: "Loading...", path: "#" }];
+      : [{ value: 1, label: 'Action', path:'/categories/action' },
+         { value: 2, label: 'Puzzle', path:'/categories/puzzle'  },
+         { value: 3, label: 'Multiplayer', path:'/categories/multiplayer'  },
+         { value: 4, label: 'Race', path:'/categories/race'  },
+         { value: 5, label: 'Sport', path:'/categories/sport'  },];
 
   return <DropdownMenu options={categories} buttonName="Categories" />;
 }
