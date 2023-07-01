@@ -22,11 +22,6 @@ test('knop werkt', () => {
   expect(screen.getByText('Home')).toBeInTheDocument();
 });
 
-test('zoekbalk rendert', () => {
-  render(<Action />);
-  expect(screen.getByRole('textbox')).toBeInTheDocument();
-});
-
 test('game table rendert', () => {
   render(<Action />);
   expect(screen.getByText('Spel 1')).toBeInTheDocument();

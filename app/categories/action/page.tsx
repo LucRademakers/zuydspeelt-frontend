@@ -2,7 +2,6 @@ import Image from 'next/image'
 import Link from 'next/link';
 import React from 'react';
 import 'tailwindcss/tailwind.css';
-
  
 const Home = () => {
   return (
@@ -21,6 +20,7 @@ const Home = () => {
         <div className='border-black border-[3px] rounded-lg h-[50px]'>
           <h1 className='text-center mt-[5px]'>SPEL 1</h1> 
         </div>
+        
         
         <div className='border-black border-[3px] rounded-lg h-[50px]'>
           <h1 className='text-center mt-[5px]'>SPEL 2</h1>
