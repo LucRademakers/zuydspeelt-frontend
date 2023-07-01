@@ -1,20 +1,10 @@
 import Image from 'next/image'
 import Link from 'next/link';
 import React from 'react';
-import Dropdown from "@/components/Dropdown";
-import Searchbar from "@/components/Searchbar";
-
- 
-
- 
-
-
 
 const Home = () => {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-30">
-
-      <Searchbar />
 
       <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
     
