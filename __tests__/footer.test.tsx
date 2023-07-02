@@ -11,17 +11,17 @@ test('Controleren of de juiste content wordt gerenderd', () => {
     
     expect(getByText('Contact us on: +31 (0)45 400 60 60 or visit our social media.')).toBeTruthy();
     
-    const instagramImage = getByAltText('Instagram');
+    const instagramImage = getByAltText('Instagram') as HTMLImageElement;
     expect(instagramImage).toBeTruthy();
-    expect(instagramImage.src).toContain('instagram.png');
+    expect(instagramImage.src).toContain('Instagram.png');
     
-    const facebookImage = getByAltText('Facebook');
+    const facebookImage = getByAltText('Facebook') as HTMLImageElement;
     expect(facebookImage).toBeTruthy();
     expect(facebookImage.src).toContain('Facebook.png');
     
     expect(getByText('© 2023 ZuydSpeelt. All rights reserved. Created with the power of')).toBeTruthy();
     
-    const devOpsImage = getByAltText('DevOps');
+    const devOpsImage = getByAltText('DevOps') as HTMLImageElement;
     expect(devOpsImage).toBeTruthy();
     expect(devOpsImage.src).toContain('/DevOps.png');
   });
