@@ -1,8 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
-import 'tailwindcss/tailwind.css';
 
-export default function GamesOverview() {
+export default function page3 () {
   return (
     <div className="bg-blue-200 bg-cover bg-center h-screen w-screen flex flex-col justify-center items-center">
       <div>
@@ -11,38 +10,38 @@ export default function GamesOverview() {
       <div className="mt-12 grid grid-cols-2 gap-x-20 gap-y-8">
         <Link href="/game1">
           <button className="border-black rounded-lg py-3 px-14 bg-blue-300 text-white text-sm">
-            Game 1
+            Game x
           </button>
         </Link>
         <Link href="/game2">
           <button className="border-black rounded-lg py-3 px-14 bg-blue-300 text-white text-sm">
-            Game 2
+            Game x
           </button>
         </Link>
         <Link href="/game3">
           <button className="border-black rounded-lg py-3 px-14 bg-blue-300 text-white text-sm">
-            Game 3
+            Game x
           </button>
         </Link>
         <Link href="/game4">
           <button className="border-black rounded-lg py-3 px-14 bg-blue-300 text-white text-sm">
-            Game 4
+            Game x
           </button>
         </Link>
         <Link href="/game5">
           <button className="border-black rounded-lg py-3 px-14 bg-blue-300 text-white text-sm">
-            Game 5
+            Game x
           </button>
         </Link>
         <Link href="/game6">
           <button className="border-black rounded-lg py-3 px-14 bg-blue-300 text-white text-sm">
-            Game 6
+            Game x
           </button>
         </Link>
-      </div>
+      </div>      
       <div className="fixed bottom-20 right-20">
-      <Link href="gamesoverview/">
-        <button className="border border-gray-300 rounded-full py-2 px-4 bg-blue-300 text-white">
+      <Link href="gamesoverview">
+        <button className="border border-gray-300 rounded-full py-2 px-4 bg-blue-500 text-white">
           1
         </button>
       </Link>
@@ -52,11 +51,11 @@ export default function GamesOverview() {
         </button>
       </Link>
       <Link href="gamesoverview/page3">
-        <button className="border border-gray-300 rounded-full py-2 px-4 bg-blue-500 text-white">
+        <button className="border border-gray-300 rounded-full py-2 px-4 bg-blue-300 text-white">
           3
         </button>
       </Link>
+      </div>  
       </div>
-    </div>
   );
-}
+};
