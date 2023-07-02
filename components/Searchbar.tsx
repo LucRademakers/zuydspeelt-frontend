@@ -14,10 +14,11 @@ export default function Searchbar() {
   const router = useRouter();
   const { data: games, error: gamesError } = useFetch<Game[]>(API_ENDPOINT.GAMES);
 
+/*
   if (gamesError) {
     console.error("SEARHCBAR ERROR " + gamesError);
   }
-
+*/
 
   const filteredGames = games ? games.filter((game) =>
     game.title.toLowerCase().includes(searchTerm.toLowerCase())

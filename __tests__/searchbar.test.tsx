@@ -1,6 +1,7 @@
 import { render, screen, fireEvent } from '@testing-library/react';
 import Searchbar from '@/components/Searchbar';
 import '@testing-library/jest-dom';
+import { act } from 'react-dom/test-utils'
 
 // useRouter wordt hier gemocked; anders werken de tests niet
 jest.mock('next/navigation', () => ({
@@ -40,7 +41,9 @@ test('Correcte placeholder tekst', () => {
 test('Zoekterm wordt correct geüpdatet', () => {
     render(<Searchbar />);
     const inputElement = screen.getByPlaceholderText('Search games...') as HTMLInputElement;
-    fireEvent.change(inputElement, { target: { value: 'Game 1' } });
+    act(() => {
+        fireEvent.change(inputElement, { target: { value: 'Game 1' } });
+    });
     expect(inputElement.value).toBe('Game 1');
 });
 
@@ -50,8 +53,9 @@ test('"No matching games." wordt weergegeven wanneer het zoekresultaat niet best
     render(<Searchbar />);
     const searchInput = screen.getByPlaceholderText('Search games...');
   
-    fireEvent.change(searchInput, { target: { value: 'Dit spel bestaat niet' } });
-  
+    act(() => {
+        fireEvent.change(searchInput, { target: { value: 'Dit spel bestaat niet' } });
+    });
     const noResultsMessage = screen.getByText('No matching games found.');
     expect(noResultsMessage).toBeInTheDocument();
 });
