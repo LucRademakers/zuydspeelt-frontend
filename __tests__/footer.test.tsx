@@ -13,7 +13,7 @@ test('Controleren of de juiste content wordt gerenderd', () => {
     
     const instagramImage = getByAltText('Instagram');
     expect(instagramImage).toBeTruthy();
-    expect(instagramImage.src).toContain('instagram.png');
+    expect(instagramImage.src).toContain('Instagram.png');
     
     const facebookImage = getByAltText('Facebook');
     expect(facebookImage).toBeTruthy();
