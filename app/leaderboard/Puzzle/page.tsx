@@ -1,4 +1,3 @@
-import Searchbar from "@/components/Searchbar"
 import Link from 'next/link';
 import Image from 'next/image'
 
@@ -7,10 +6,6 @@ export default function Puzzle() {
     return (
         <div>
             <Link href='/'>Home</Link>                        
-
-            <div>
-                {<Searchbar />}
-            </div>
 
             <h1 className = "font-bold text-4xl grid place-items-center mt-20">
                 {"Puzzle"}

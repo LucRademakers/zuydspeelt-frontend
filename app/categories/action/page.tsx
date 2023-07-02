@@ -1,16 +1,11 @@
 import Image from 'next/image'
 import Link from 'next/link';
 import React from 'react';
-import Dropdown from "@/components/Dropdown";
-import Searchbar from "@/components/Searchbar";
 import 'tailwindcss/tailwind.css';
-
  
 const Home = () => {
   return (
     <main>
-
-      <Searchbar />
 
       <Link href='/'>Home</Link>
 
@@ -26,6 +21,7 @@ const Home = () => {
           <h1 className='text-center mt-[5px]'>SPEL 1</h1> 
         </div>
         
+        
         <div className='border-black border-[3px] rounded-lg h-[50px]'>
           <h1 className='text-center mt-[5px]'>SPEL 2</h1>
         </div>
@@ -39,27 +35,19 @@ const Home = () => {
         </div>
 
         <div className='border-black border-[3px] rounded-lg h-[100px]'>
-          <image>
-
-          </image>
+        
         </div>
 
         <div className='border-black border-[3px] rounded-lg h-[100px]'>
-          <image>
-            
-          </image>
+         
         </div>
 
         <div className='border-black border-[3px] rounded-lg h-[100px]'>
-          <image>
-            
-          </image>
+          
         </div>
 
         <div className='border-black border-[3px] rounded-lg h-[100px]'>
-          <image>
-            
-          </image>
+        
         </div>
 
         <div className='border-black border-[3px] rounded-lg h-[300px] p-3'>
