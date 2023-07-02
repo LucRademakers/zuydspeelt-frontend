@@ -6,7 +6,7 @@ const Footer = () => {
       <div className="flex items-center justify-center mb-2">
         Contact us on: +31 (0)45 400 60 60 or visit our social media.
         <a href="https://www.instagram.com" className="ml-2">
-          <img src="/instagram.png" alt="Instagram" className="w-5" />
+          <img src="/Instagram.png" alt="Instagram" className="w-5" />
         </a>
         <a href="https://www.facebook.com" className="ml-2">
           <img src="/Facebook.png" alt="Facebook" className="w-5" />
